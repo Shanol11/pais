@@ -1,0 +1,324 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+body,html {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+/* Container */
+.container {
+  width: 100%;
+  min-height: 100vh; /* Fixes the extra space issue */
+  overflow: hidden;
+}
+
+/* Hero Section */
+.hero {
+  width: 100%;
+  min-height: 100vh; /* Adjusts dynamically to content */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Overlay */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 50px 15px;
+  color: white;
+}
+
+/* Greeting Text - Fixed Height to Prevent Layout Shift */
+.zoom-text-container {
+  height: 100px; /* Ensures text does not shift */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Zoom-In & Out Greeting Animation */
+.zoom-text {
+  font-size: 100px;
+  font-weight: bold;
+  text-align: center;
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.zoom-in {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.zoom-out {
+  transform: scale(0.5);
+  opacity: 0;
+}
+
+/* Heading */
+.hero h4 {
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Paragraph */
+.hero p {
+  font-size: 18px;
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Custom Button */
+.btn-custom {
+  position: relative;
+  padding: 12px 25px;
+  font-size: 18px;
+  cursor: pointer;
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+  overflow: hidden;
+  transition: color 0.4s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 30px;
+}
+
+/* Arrow Circle */
+.arrow-circle {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #8b1c34;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+  position: relative;
+  z-index: 2;
+  border: 2px solid white;
+}
+
+/* Mouse Circle */
+.mouse-circle {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: #e9b472;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+/* ✅ Mobile View Adjustments */
+@media (max-width: 1024px) {
+  .hero {
+      min-height: 100vh;
+      padding: 40px;
+  }
+
+  .zoom-text-container {
+      height: 90px;
+     
+  }
+
+  .zoom-text {
+      font-size: 80px;
+  }
+  .zoom-in {
+    transform: scale(1);
+    opacity: 1;
+  }
+  
+  .zoom-out {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+  .hero p {
+      font-size: 16px;
+      max-width: 80%;
+  }
+
+  .buttons {
+      flex-direction: row;
+      gap: 15px;
+  }
+
+  .btn-custom {
+      font-size: 16px;
+      padding: 10px 20px;
+  }
+
+  .arrow-circle {
+      width: 25px;
+      height: 25px;
+  }
+  body,html {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+}
+
+@media (max-width: 768px) {
+  body,html {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+  .hero {
+      min-height: 100vh;
+      padding: 30px;
+  }
+
+  
+    /* Fix height for mobile */
+    .zoom-text-container {
+        min-height: 100px; /* Ensures stable height */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        overflow: hidden;
+        position: relative; /* Allows controlled movement */
+    }
+
+    /* Ensure both lines fit properly */
+    .zoom-text {
+        font-size: 45px; /* Adjust for mobile */
+        font-weight: bold;
+        line-height: 1.2; /* Reduces space between lines */
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        white-space: pre-line; /* Ensures breaks work */
+        position: absolute; /* Enables smooth movement */
+        margin-top: -50px;
+    }
+
+    /* Smooth text transition with position shift */
+    .zoom-in {
+      transform: scale(1);
+      opacity: 1;
+    }
+    
+    .zoom-out {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+
+
+  .hero p {
+      font-size: 16px;
+      max-width: 90%;
+  }
+
+  .buttons {
+      flex-direction: column; /* Stack buttons */
+      gap: 10px;
+  }
+
+  .btn-custom {
+      font-size: 14px;
+      padding: 8px 16px;
+  }
+
+  .arrow-circle {
+      width: 22px;
+      height: 22px;
+  }
+  .hero-overlay p{
+    margin-top: 200px;
+    line-height: 1.6;
+    
+  }
+  .hero-overlay h4{
+    margin-top: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+      min-height: 100vh;
+      padding: 20px;
+  }
+
+  .zoom-text-container {
+      height: 60px; /* Prevents shifting */
+  }
+
+  .zoom-text {
+      font-size: 40px;
+  }
+
+  .hero p {
+      font-size: 14px;
+      max-width: 95%;
+  }
+
+  .buttons {
+      flex-direction: column;
+      gap: 8px;
+  }
+
+  .btn-custom {
+      font-size: 12px;
+      padding: 6px 14px;
+  }
+
+  .arrow-circle {
+      width: 20px;
+      height: 20px;
+  }
+
+  /* Reduce mouse circle size */
+  .mouse-circle {
+      width: 10px;
+      height: 10px;
+  }
+  body,html {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+}
+
+
+

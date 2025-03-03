@@ -1,0 +1,244 @@
+.why-choose-us-container {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #fff;
+  font-family: 'Your Preferred Font', sans-serif; /* Replace with your font */
+ 
+}
+
+.section-title {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.main-heading {
+  color: #222;
+  font-size: 45px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  margin-left: 50px;
+  word-spacing: 10px; /* Adds space between words */
+}
+
+.main-heading span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.5s forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+
+
+.main-heading-top{
+  margin-top: 60px;
+  margin-left: 50px;
+}
+
+
+
+.features-container {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-box {
+  width: 300px; /* Approximate 4cm (adjust as needed) */
+  height: 300px; /* Approximate 4cm (adjust as needed) */
+  margin: 20px;
+  padding: 20px; /* Reduced padding */
+  /* background-color: #fff; */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 5px solid #f0f0f0;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+.feature-icon {
+  width: 100px; /* Reduced icon size */
+  height: 100px; /* Reduced icon size */
+  margin-bottom: 10px; /* Reduced margin */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feature-icon img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.feature-heading {
+  font-size: 18px; /* Reduced font size */
+  font-weight: 600;
+  color:black;
+  margin-bottom: 5px; /* Reduced margin */
+  text-align: center;
+}
+
+.feature-text {
+  font-size: 16px; /* Reduced font size */
+  color:black;
+  line-height: 1.4; /* Reduced line height */
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Gradient border effect */
+.feature-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 7px solid transparent;
+  background: linear-gradient(to right, #ff9800, #f44336);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  padding: 2px;
+}
+.letter {
+  opacity: 0;
+  transform: translateX(-20px);
+  display: inline-block;
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+.letter.fade-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .features-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .feature-box {
+      width: 190px;
+      height: 190px;
+      padding: 30px;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid transparent;
+      border-bottom: none;
+      position: relative; /* Required for pseudo-elements */
+  }
+
+  .feature-box:last-child {
+      border-bottom: 5px solid transparent;
+  }
+
+
+  .main-heading {
+      font-size: 20px;
+      margin-bottom: 60px;
+  }
+
+  .why-choose-us-container {
+      padding: 80px 20px;
+  }
+
+  .section-title {
+      font-size: 18px;
+  }
+
+  .feature-heading {
+      font-size: 20px;
+  }
+
+  .feature-text {
+      font-size: 18px;
+  }
+
+  .feature-icon {
+      width: 80px;
+      height: 80px;
+  }
+
+  .main-heading {
+      white-space: normal;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-heading {
+      font-size: 18px;
+      margin-left: 20px;
+      word-spacing: 5px;
+  }
+
+  .section-title {
+      font-size: 14px;
+  }
+
+  .main-heading-top {
+      margin-left: 20px;
+  }
+
+  .features-container {
+      width: 100%;
+      margin: 0 auto;
+  }
+
+  .feature-box {
+      width: 270px;
+      height: 240px;
+      padding: 20px;
+      margin: -4px 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid transparent;
+      position: relative;
+  }
+
+  .feature-box:last-child {
+      border-bottom: 5px solid transparent;
+  }
+
+   
+  .feature-icon {
+      width: 120px;
+      height: 120px;
+  }
+
+  .feature-heading {
+      font-size: 16px;
+  }
+
+  .feature-text {
+      font-size: 14px;
+  }
+
+  .why-choose-us-container {
+      padding: 60px 15px;
+  }
+}

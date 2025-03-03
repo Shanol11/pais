@@ -1,0 +1,238 @@
+/* Main Container */
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 3cm;
+    width: 100%;
+    
+}
+
+.about-content-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-left: 200px;
+}
+
+.about-text {
+    flex: 1;
+    max-width: 48%;
+    text-align: left;
+}
+
+.about-text h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.about-text p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+/* OUR MENU Button */
+.menu-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid black;
+    border-radius: 50px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    width: 180px;
+}
+
+.menu-box span {
+    color: black;
+    margin-right: 10px;
+}
+
+.arrow-circle {
+    width: 35px;
+    height: 35px;
+    background-color: #8b1c3b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.arrow-icon {
+    color: white;
+    font-size: 1rem;
+}
+
+/* Right Side Image */
+.about-image {
+    flex: 1;
+    max-width: 48%;
+}
+
+.about-image img {
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+}
+
+/* Centered Headings */
+.centered-headings {
+    text-align: center;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.centered-headings h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-right: 180px;
+}
+
+.centered-headings h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+    margin-right: 180px;
+}
+
+/* Team Images */
+.team-images {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    width: 100%;
+    margin-right: 150px;
+}
+
+.team-card {
+    position: relative;
+    width: 450px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.team-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Zoom Effect */
+.team-card.zoomed {
+    transform: scale(1.1);
+}
+
+/* Team Info */
+.team-info {
+    padding: 1rem;
+    text-align: center;
+}
+
+.team-info h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.team-info p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Badge */
+.badge {
+    display: inline-block;
+    background: #8b1c3b;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 0.3rem 0.7rem;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-content-wrapper {
+        flex-direction: column;
+        padding-right: 0;
+        margin-bottom: 20px;
+        margin-left: 5px;
+    }
+
+    .about-text,
+    .about-image {
+        max-width: 100%;
+        text-align: center;
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .about-image img {
+        width: 100%;
+        height: auto;
+        padding-right: 0;
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+
+    .team-images {
+        flex-direction: column;
+        align-items: center;
+        margin-right: 0;
+    }
+
+    .team-card {
+        width: 70%;
+        max-width: 400px;
+    }
+    .centered-headings h2, .centered-headings h1{
+        margin-right: 0;
+    }
+    .centered-headings h2{
+        font-size: 1.2rem;
+    }
+    .centered-headings h1{
+        font-size: 2rem;
+    }
+    .about-text h1{
+        font-size: 2.3rem;
+    }
+    .about-text p{
+        text-align: justify;
+    }
+    .about-container{
+        padding: 1rem;
+    }
+    .menu-box{
+        margin-left: 80px;
+        background-color: transparent;
+    }
+}
+@media (max-width: 325px) {
+    .about-text h1{
+        font-size: 2rem;
+    }
+    .menu-box{
+        margin-left: 50px;
+    }
+}
+@media (min-width: 400px) and (max-width:430px) {
+    .menu-box{
+        margin-left: 100px;
+    }
+}

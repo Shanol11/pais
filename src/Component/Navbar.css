@@ -1,0 +1,283 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: inherit;
+  /* background-color: #ffffff; */
+  border: 2px solid #ffffff;
+  padding: 10px 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  background-color: #ffffff;
+}
+
+
+
+.logo {
+  width: 100px;
+  vertical-align: middle;
+}
+
+/* Menu items */
+.menu {
+  list-style: none;
+  display: flex;
+  color:black;
+  margin-bottom: 0;
+ 
+  gap: 20px;
+  font-size:23px;
+  flex-grow: 1;
+  padding-left: 250px;
+}
+#id1
+{
+  padding-right: 200px;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: inherit;
+  padding: 10px;
+  transition: color 0.3s ease;
+
+}
+
+.menu li a:hover {
+  color: red;
+}
+
+/* Dropdown styling */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #e5b67c; /* Brownish-orange */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ 
+  list-style: none;
+  
+  min-width: 300px; /* Increased width */
+  border-radius: 8px;
+  
+  
+}
+
+.dropdown-menu li a:hover{
+  color: white;
+}
+.dropdown-menu li {
+  
+  font-size: 16px; /* Increased font size */
+  color: black;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  display: flex;
+  align-items: center; /* Align text properly */
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  z-index: 1000;
+  
+}
+
+.dropdown-menu li:hover,
+.dropdown-menu li.active {
+  background-color: #8b1c3c; /* Maroon color */
+  color: white; /* White text */
+  border-radius: 5px;
+  
+ 
+}
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+
+/* Book Now button */
+.buttons3 {
+  
+  
+ 
+  margin-top: 10px;
+  margin-right: 50px;
+  
+}
+
+/* Custom Button */
+.book-btn {
+  position: relative;
+  padding: 12px 25px;
+  font-size: 18px;
+  cursor: pointer;
+  border: 2px solid black;
+  background: transparent;
+  color:black;
+  overflow: hidden;
+  transition: color 0.4s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 30px;
+ 
+}
+
+/* Fix: White border outline on focus */
+.book-btn:focus,
+.book-btn:active {
+  outline: 2px solid black;
+  border: none;
+}
+
+/* Before Hover: Maroon Arrow Circle */
+.arrow-circle {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #8b1c34;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+  position: relative;
+  z-index: 2;
+  border: 2px solid white;
+}
+
+/* Gold Fill Background Effect */
+.book-btn::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background: #e9b472;
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+}
+
+/* Ensures text and arrow stay on top */
+.book-btn span {
+  position: relative;
+  z-index: 2;
+  transition: inherit;
+}
+
+/* Hover Effects */
+.book-btn:hover {
+  color: black;
+}
+
+.book-btn:hover::before {
+  width: 100%;
+}
+
+/* Arrow Circle Hover Effect */
+.book-btn:hover .arrow-circle {
+  background-color: white;
+  color: black;
+}
+
+/* Optional: Add shadow effect */
+.book-btn:hover {
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+
+
+
+
+/* Ensure laptop view remains the same */
+@media (min-width: 769px) {
+.hamburger {
+  display: none;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 20px;
+}
+
+
+.menu {
+  display: flex; 
+  justify-content: center; /* Ensures the menu is centered */
+  align-items: center;
+  margin-left: 20px;
+}
+}
+
+/* Mobile Styles - Only for screens below 768px */
+@media (max-width: 768px) {
+.hamburger {
+  display: block;
+  font-size: 25px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: white;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.menu.open {
+  display: flex;
+}
+
+.dropdown-menu {
+  display: none;
+  position: relative;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.dropdown-menu.open {
+  display: block;
+}
+.dropdown span {
+  display: inline-block;
+  padding-left: 10px; /* Moves "Menu ▼" slightly to the right */
+  overflow: scroll;
+}
+.dropdown-menu.open {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+ 
+}
+
+.book-now-btn {
+  margin-top: 10px;
+  margin-right: auto;
+}
+.book-btn{
+  height: 50px;
+  width: 190px;
+}
+}
