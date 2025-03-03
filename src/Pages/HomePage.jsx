@@ -39,7 +39,7 @@ const HomePage= () => {
   return (
     <div className="container">
       {/* Hero Section */}
-      <div className="hero" style={{ backgroundImage: 'url("/assets/image3.jpg")' }}>
+      <div className="hero" style={{ backgroundImage: 'url("assets/image3.jpg")' }}>
         <div className="hero-overlay">
           <h4> WELCOME TO PAIS CATERING! </h4>
 

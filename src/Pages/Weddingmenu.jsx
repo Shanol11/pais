@@ -97,7 +97,7 @@ const Weddingmenu = () => {
         <div className="image-gallery">
           {paginatedDishes.map((dish, index) => (
             <div key={index} className="dish-card">
-              <img src={`/assets/${dish.img}`} alt={dish.name} />
+              <img src={`$/assets/${dish.img}`} alt={dish.name} />
               <p>{dish.name}</p>
             </div>
           ))}
